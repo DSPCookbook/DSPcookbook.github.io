@@ -1,0 +1,35 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<!-- <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% for post in posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %} -->
+
+
+<div class="Recipes">
+    <h1>All Recipes</h1>
+        {% for category in site.categories %}
+            {% assign sorted = category[1] | where:"layout", "recipe" | sort: 'alphabetical' %}
+            {% if sorted.size > 0 %}
+              <h2><a href="{{ site.url }}/{{ category | first | slugify }}">{{ category | first | replace: '_',' ' }}</a></h2>
+              <ul>
+                {% for post in sorted %}
+                  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+              </ul>
+        {% endif %}
+        {% endfor %}
+</div>

@@ -1,0 +1,17 @@
+---
+layout: single
+<!-- classes: wide -->
+---
+
+<article class="recipe">
+
+  {% if page.picture %}
+    <img src="{{ page.picture }}" alt="Photo of a {{ page.title | downcase }}">
+  {% endif %}
+
+
+  <div>
+    {{ content }}
+  </div>
+
+</article>
