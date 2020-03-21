@@ -3,7 +3,7 @@ layout: recipe
 title: The Wiener filter
 modified: 2020-3-17
 excerpt: Something with sinusoids.
-categories: [Optimal_Filtering]
+categories: [Optimal-Filtering]
 tags: [Statistical Signal Processing, Optimal Filtering]
 
 ---

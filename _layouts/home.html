@@ -24,7 +24,7 @@ layout: archive
         {% for category in site.categories %}
             {% assign sorted = category[1] | where:"layout", "recipe" | sort: 'alphabetical' %}
             {% if sorted.size > 0 %}
-              <h2><a href="{{ site.url }}/{{ category | first | slugify }}">{{ category | first | replace: '_',' ' }}</a></h2>
+              <h2><a href="{{ site.url }}/{{ category | first | slugify }}">{{ category | first | replace: '-',' ' }}</a></h2>
               <ul>
                 {% for post in sorted %}
                   <li><a href="{{ post.url }}">{{ post.title }}</a></li>

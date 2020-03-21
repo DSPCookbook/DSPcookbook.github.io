@@ -7,7 +7,7 @@ main:
   - title: "Beamforming"
     url: /beamforming
   - title: "Optimal Filtering"
-    url: /optimal_filtering
+    url: /optimal-filtering
   # - title: "Blog"
   #   url: /blog
   - title: "About"

@@ -19,7 +19,7 @@
     {% for hash in category_hashes %}
       {% assign keyValue = hash | split: '|' %}
       {% capture category_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}
-      <a href="{{ category_word | slugify | relative_url }}" class="page__taxonomy-item" rel="tag">{{ category_word | replace: '_',' ' }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+      <a href="{{ category_word | slugify | relative_url }}" class="page__taxonomy-item" rel="tag">{{ category_word | replace: '-',' ' }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
     {% endfor %}
     </span>
   </p>
