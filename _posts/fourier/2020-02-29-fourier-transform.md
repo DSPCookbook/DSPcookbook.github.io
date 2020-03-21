@@ -5,7 +5,6 @@ modified: 2020-2-29
 excerpt: Something with sinusoids.
 categories: [Fourier]
 tags: [Fourier, frequency]
-
 ---
 
 

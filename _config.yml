@@ -32,9 +32,9 @@ read_time                : true
 words_per_minute         : 200
 github                   : [metadata]
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "dspcookbook" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -200,7 +200,8 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
+  parse_block_html: true
+  math_engine: mathjax
 
 # Sass/SCSS
 # sass:
@@ -274,11 +275,15 @@ defaults:
   # _posts
   - scope:
       path: ""
-      type: categories
+      type: "posts"
     values:
-      layout: single
+      layout: recipe
       author_profile: false
       read_time: true
-      comments: # true
-      share: false
-      related: false
+      toc: true
+      toc_icon: "fas fa-book-open"
+      toc_label: "Contents:"
+      toc_sticky: true
+      comments: true
+      share: true
+      related: true

@@ -77,6 +77,11 @@ $\textbf{w} = R_{XX}^{-1} r_{xs}$
 
 #### MATLAB code
 
+<details>
+<summary>
+Click here to see the code
+</summary>
+
 ```matlab
 %   Copyright 2020: DSPCookbook
 clc, clear, close all
@@ -141,6 +146,9 @@ legend('x(n)','y(n)','s(n)')
 title('Wiener filtering')
 
 ```
+
+</details>
+
 
 #### Derivation of the Wiener filter using linear algebra
 
