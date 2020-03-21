@@ -18,16 +18,16 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 locale                   : "en-US"
 title                    : "DSP Cookbook"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Making Digital Signal Processing easy" # site tagline that appears below site title in masthead
 name                     : "The DSP Cookbook"
-description              : "Making Digital Signal Processing easy."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+description              : "Making Digital Signal Processing easy, by provinding simple, to-the-point recipes for the most common signal processing algorithms."
+url                      : "https://DSPCookbook.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "DSPCookbook/DSPCookbook.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "favicon.ico" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "images/logo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "" # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 read_time                : true
 words_per_minute         : 200
 github                   : [metadata]
