@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 
 # Site Settings
 locale                   : "en-US"
-title                    : "The DSP Cookbook"
+title                    : "DSP Cookbook"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "The DSP Cookbook"
@@ -26,7 +26,7 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "DSPCookbook/DSPCookbook.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "favicon.ico" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : false # true, false (default)
 read_time                : true
 words_per_minute         : 200
@@ -65,7 +65,7 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification :
+google_site_verification : "aCD5kDzAiB9FYN9G8bTwFGT_hTcZ-0sMv0Mr_tX867E"
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
@@ -87,10 +87,10 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : google # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+    tracking_id          : UA-161428691-1
+    anonymize_ip         : false # true, false (default)
 
 
 # Site Author
@@ -201,7 +201,6 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
   parse_block_html: true
-  math_engine: mathjax
 
 # Sass/SCSS
 # sass:
@@ -287,3 +286,4 @@ defaults:
       comments: true
       share: true
       related: true
+      mathjax: true
