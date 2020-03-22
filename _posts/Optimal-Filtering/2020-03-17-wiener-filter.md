@@ -152,6 +152,8 @@ title('Wiener filtering')
 
 #### Derivation of the Wiener filter using linear algebra
 
+For the math, check out the [extra material]({{ site.baseurl }}{% link _posts/Optimal-Filtering/2020-03-20-extra-material.md %}).
+
 The Wiener filter is a linear minimum mean-square-error (LMMSE) estimator, thus we seek a linear combination of the sequence $x(n)$ that minimizes the MSE. Let us define the mean-square-error to be
 
 $\text{MSE} \triangleq \mathbb{E} \left[ \left( s(n) - \hat{s}(n) \right)^2 \right]$
