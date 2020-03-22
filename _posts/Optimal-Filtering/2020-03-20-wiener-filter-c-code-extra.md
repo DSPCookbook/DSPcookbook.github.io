@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Derivation of the Wiener Filter
+title: C-code implementation of the Wiener Filter
 modified: 2020-3-22
 excerpt: Something with sinusoids.
 categories: [Optimal-Filtering]
@@ -89,7 +89,7 @@ void main(void)
   	// Cross-correlation of x(n) and s(n)
   	rxs[k] = rss[k];
 
-  	// Compute autocorrelation of s(n)
+  	// Compute autocorrelation of x(n)
   	rxx[k] = rss[k] + rvv[k];
   }
 

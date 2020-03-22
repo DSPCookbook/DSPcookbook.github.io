@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Multichannel Wienerfilter
+title: Multichannel Wiener filter (MWF)
 modified: 2020-2-29
 excerpt: This is the excerpt shown on the main page. If you want to know more, click here.
 categories: [Beamforming]

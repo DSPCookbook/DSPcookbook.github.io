@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Time domain Wiener filter - AR(1) in white Gaussian noise
+title: Time domain Wiener filter - Unknown signal in white Gaussian noise (TBD)
 modified: 2020-3-22
 excerpt: Wiener filter
 categories: [Optimal-Filtering]
@@ -33,22 +33,16 @@ $\hat{s}(n) = \textbf{w}^{\ast T}\textbf{x}(n)$.
 |-----------------------------------------------||:------------------------------------:|
 | 1. $s(n)$ and $v(n)$ are uncorrelated. 		|| $\mathbb{E}[s(n)v(n)] = 0$ 			|
 | 2. $v(n)$ is a white Gaussian noise. 			|| $v(n) \sim \mathcal{N}(0,\sigma_v^2)$|
-| 3. $s(n)$ is an AR(1) process. 		 		|| $s(n) = \alpha s(n-1) + u(n)$ 		|
-| 4. $u(n)$ is a white Gaussian process. 		|| $u(n) \sim \mathcal{N}(0,\sigma_u^2)$|
 | 5. The noise variance $\sigma_v^2$. 			|| _Known_ 								|
-| 6. The variance of $u(n)$ i.e. $\sigma_u^2$.  || _Known_ 								|
-| 7. The time constant $\alpha$. 				|| _Known_ 								|
-
-If assumption 3, 4, 6, and 7, are unknown, see this post on [unknown signal in white Gaussian noise]({{ site.baseurl }}{% link _posts/Optimal-Filtering/2020-03-17-wiener-filter-2.md %}).
 
 
 ## 3) Solution
 
 The Wiener filter is given as
 
-$\textbf{w}^\ast = R_{xx}^{-1} r_{xs}$,
+$$	\textbf{w}^\ast = \hat{\textbf{R}}_{xx}^{-1} \hat{\textbf{r}}_{xs}$$,
 
-where $R_{xx} \in \mathbb{R}^{M\times M}$ is the autocorrelation matrix of $x(n)$ and $r_{xs} \in \mathbb{R}^M$ is the cross-correlation vector between $s(n)$ and $x(n)$.
+where $$\hat{\textbf{R}}_{xx} \in \mathbb{R}^{M\times M}$$ is the sample estimate of the autocorrelation matrix of $x(n)$ and $\hat{\textbf{r}}{xs} \in \mathbb{R}^M$ is the sample estimate of the cross-correlation vector between $s(n)$ and $x(n)$.
 
 
 ## 4) Step-by-step guide
@@ -59,13 +53,10 @@ where $R_{xx} \in \mathbb{R}^{M\times M}$ is the autocorrelation matrix of $x(n)
 	$r_{vv}(k) = \sigma_v^2 \delta (k), \quad \text{for }k = 0,...,M-1$
 
 	where $\delta (k)$ is the Kronecker delta function and $k$ is the lag-index.
-3. Compute the autocorrelation of $s(n)$ for $M$-lags
 
-	$r_{ss}(k) = \frac{\alpha^{k}}{1-\alpha^2} \sigma_s^2, \quad \text{for }k = 0,...,M-1 $
+4. Compute the sample autocorrelation of $x(n)$
 
-4. Compute the autocorrelation of $x(n)$
-
-	$r_{xx}(k) = r_{ss}(k) + r_{vv}(k)$
+	$r_{xx}(k) = \frac{1}{N-k+1} \sum_{i=-N}^{N} x(n)x(n-i), \quad \text{for }k = 0,...,M-1 $
 
 5. Form the autocorrelation matrix $R_{xx}$ of $x(n)$
 6. Form the cross-correlation vector between $x(n)$ and $s(n)$
