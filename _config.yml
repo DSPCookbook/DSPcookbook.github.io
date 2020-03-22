@@ -20,7 +20,7 @@ title                    : "DSP Cookbook"
 title_separator          : "-"
 subtitle                 : "Making Digital Signal Processing easy" # site tagline that appears below site title in masthead
 name                     : "The DSP Cookbook"
-description              : "Making Digital Signal Processing easy, by provinding simple, to-the-point recipes for the most common signal processing algorithms."
+description              : "Making DSP easy by provinding simple, to-the-point tutorials and how-tos for the most common digital signal processing algorithms."
 url                      : "https://DSPCookbook.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "DSPCookbook/DSPCookbook.github.io"
