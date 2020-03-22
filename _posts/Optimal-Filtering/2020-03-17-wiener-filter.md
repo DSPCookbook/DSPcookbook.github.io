@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Wiener Filter
+title: Time domain Wiener filter
 modified: 2020-3-22
 excerpt: Wiener filter
 categories: [Optimal-Filtering]
@@ -25,10 +25,6 @@ where:
 **Overall Objective**: Retrieve $s(n)$ given $x(n)$
 
 The Wiener filter finds the optimal filter coefficients that solves following optimization problem
-
-$ w_0^\ast,...,w_{I-1}^\ast = \underset{w_0,...,w_{I-1}}{\text{arg min}} \quad \mathbb{E} \left[ \left( s(n) - \sum\limits_{i=0}^{I-1} w_i x(n-i) \right)^2 \right] $
-
-or equivalently
 
 $ \textbf{w}^\ast = \underset{\textbf{w}}{\text{arg min}} \quad \mathbb{E} \left[ \left( s(n) - \textbf{w}^T \textbf{x}(n) \right)^2 \right] $
 
@@ -55,9 +51,16 @@ where $\textbf{w} = [w_0,...,w_{I-1}]^T$ and $\textbf{x}(n) = [x(n),x(n-1)...,x(
 
 ------------
 
-<details><summary>#### Solution</summary>
+<details><summary>#### Solution
+</summary>
 
 $\textbf{w} = R_{XX}^{-1} r_{xs}$
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
 
 </details>
 
@@ -165,6 +168,10 @@ title('Wiener filtering')
 </details>
 
 ------
+
+#### Derivation of the Wiener filter
+
+For the math, check out the [extra material]({{ site.baseurl }}{% link _posts/Optimal-Filtering/2020-03-20-wiener-filter-derivation-extra.md %}).
 
 
 

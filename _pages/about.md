@@ -12,8 +12,7 @@ The DSP Cookbook is a website for making digital signal processing easy for all 
 
 The DSP Cookbook team consists of two chefs:
 ### Poul Hoang
-Poul graduated as signal processing engineers from Aalborg University in 2018.
-He has since worked as an industrial PhD student at Oticon.
+Poul Hoang received his B.Sc. in Electronics Engineering in 2016 and later his M.Sc. in Signal Processing from the department of Electronic Systems Aalborg University in 2018. Poul Hoang is currently working towards his industrial Ph.D. degree in noise reduction for hearing assistive devices which is partly funded by Innovation Fund Denmark in collaboration with Demant A/S and Aalborg University. His research interests includes multichannel signal processing with application to speech and audio. 
 
 ### Rasmus Gundorff Sæderup
 Rasmus graduated as signal processing engineers from Aalborg University in 2018.

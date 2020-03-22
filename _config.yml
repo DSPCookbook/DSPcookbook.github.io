@@ -32,7 +32,7 @@ read_time                : true
 words_per_minute         : 200
 github                   : [metadata]
 comments:
-  provider               : false #"disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : "dspcookbook" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -87,7 +87,7 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          : "UA-161428691-1"
     anonymize_ip         : false # true, false (default)
@@ -283,7 +283,7 @@ defaults:
       toc_icon: "fas fa-book-open"
       toc_label: "Contents:"
       toc_sticky: true
-      # comments: true
+      comments: true
       share: true
       related: true
       mathjax: true
