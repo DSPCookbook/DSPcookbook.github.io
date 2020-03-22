@@ -34,7 +34,7 @@ where $\textbf{w} = [w_0,...,w_{I-1}]^T$ and $\textbf{x}(n) = [x(n),x(n-1)...,x(
 <details><summary>### Case 1: AR(1) process in white Gaussian noise
 </summary>
 
-------------
+-------------
 <details><summary>#### Assumptions
 </summary>
 
