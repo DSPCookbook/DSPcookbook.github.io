@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Time domain Wiener filter - Unknown signal in white Gaussian noise (TBD)
+title: Time domain Wiener filter - Unknown signal in white Gaussian noise 
 modified: 2020-3-22
 excerpt: Wiener filter
 categories: [Optimal-Filtering]
@@ -42,30 +42,40 @@ The Wiener filter is given as
 
 $$	\textbf{w}^\ast = \hat{\textbf{R}}_{xx}^{-1} \hat{\textbf{r}}_{xs}$$,
 
-where $$\hat{\textbf{R}}_{xx} \in \mathbb{R}^{M\times M}$$ is the sample estimate of the autocorrelation matrix of $x(n)$ and $\hat{\textbf{r}}{xs} \in \mathbb{R}^M$ is the sample estimate of the cross-correlation vector between $s(n)$ and $x(n)$.
+where $$\hat{\textbf{R}}_{xx} \in \mathbb{R}^{M\times M}$$ is the sample estimate of the autocorrelation matrix of $x(n)$ and $$\hat{\textbf{r}}_{xs} \in \mathbb{R}^M$$ is the sample estimate of the cross-correlation vector between $s(n)$ and $x(n)$.
 
 
 ## 4) Step-by-step guide
 
-1. Set filter length e.g. $M=100$.
+1. Set filter length e.g. $M=20$.
 2. Set autocorrelation of the noise to
 
 	$r_{vv}(k) = \sigma_v^2 \delta (k), \quad \text{for }k = 0,...,M-1$
 
 	where $\delta (k)$ is the Kronecker delta function and $k$ is the lag-index.
 
-4. Compute the sample autocorrelation of $x(n)$
+3. Compute the unbiased sample estimate of the autocorrelation of $x(n)$
 
-	$r_{xx}(k) = \frac{1}{N-k+1} \sum_{i=-N}^{N} x(n)x(n-i), \quad \text{for }k = 0,...,M-1 $
+	$$\hat{r}_{xx}(k) = \frac{1}{N-k} \sum\limits_{n=0}^{N-k-1} x(n)x(n+k), \quad \text{for }k = 0,...,M-1 $$
 
-5. Form the autocorrelation matrix $R_{xx}$ of $x(n)$
+	or equivalently
+
+	$$\hat{r}_{xx}(k) = \frac{1}{N-k} \textbf{x}^T(n)\textbf{x}(n+k), \quad \text{for }k = 0,...,M-1 $$
+
+	where $$\textbf{x}(n) = [\textbf{x}(0),...,\textbf{x}(N-k-1)]^T$$ and $$\textbf{x}(n+k) = [\textbf{x}(k),...,\textbf{x}(N-1)]^T$$.
+
+4. Estimate the autocorrelation of $s(n)$ as 
+
+	$$\hat{r}_{ss}(k) = \hat{r}_{xx}(k) - r_{vv}(k)$$
+
+5. Form the autocorrelation matrix $$\hat{\textbf{R}}_{xx}$$ of $x(n)$
 6. Form the cross-correlation vector between $x(n)$ and $s(n)$
 
-	$r_{xs} = r_{ss}$
+	$$\hat{r}_{xs}(k) = \hat{r}_{ss}(k)$$
 
 7. Compute the Wiener filter coefficients
 
-	$\text{w}^{\ast} = R_{xx}^{-1}r_{xs}$
+	$$\text{w}^{\ast} = \hat{\textbf{R}}_{xx}^{-1} \hat{\textbf{r}}_{xs}$$
 
 8. Perform filtering
 
@@ -81,9 +91,9 @@ A MATLAB example is provided where the signals are artificially generated.
 clc, clear, close all
 
 % Constants in simuation
-N       = 1000;
+N       = 20000;
 varu    = 1;
-varv    = 1000;
+varv    = 100;
 a       = 0.999;
 
 % Generate the noisy observed signal
@@ -96,21 +106,25 @@ v       = sqrt(varv)*randn(N,1);
 x       = s + v;
 
 % Step 1
-M       = 100;
+M       = 50;
 tau     = (0:(M-1))';
 
 % Step 2
 rvv     = zeros(M,1);
-rvv(1)  = varv;             % Autocorrelation is a Kronecker Delta function
+rvv(1)  = varv;            
 
 % Step 3
-rss     = (a.^abs(tau))/(1-a^2)*varu;
+kk = 1;
+for k = 0:M-1
+    rxx(kk,1) = 1/(N-k)*x(1:(N-k))'*x(kk:N);
+    kk = kk + 1;
+end
 
 % Step 4
-rxx     = rss + rvv;        % Autocorrelation vector
+rss = rxx - rvv;
 
 % Step 5
-Rxx     = toeplitz(rxx);    % Autocorrelation matrix
+Rxx = toeplitz(rxx);
 
 % Step 6
 rxs     = rss;
@@ -139,12 +153,6 @@ title('Wiener filtering')
 ## Derivation of the Wiener filter
 
 For the derivation of the time domain Wiener filter, check out the [extra material]({{ site.baseurl }}{% link _posts/Optimal-Filtering/2020-03-20-wiener-filter-derivation-extra.md %}).
-
-
-
-## C code implementation of the Wiener filter
-
-A C-code implementation of the simulation can be found [here]({{ site.baseurl }}{% link _posts/Optimal-Filtering/2020-03-20-wiener-filter-c-code-extra.md %})
 
 
 
