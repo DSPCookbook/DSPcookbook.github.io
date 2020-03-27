@@ -4,6 +4,7 @@ title: The Fourier Transform!
 modified: 2020-2-29
 excerpt: Something with sinusoids.
 categories: [Fourier]
+published: false
 tags: [Fourier, frequency]
 ---
 
