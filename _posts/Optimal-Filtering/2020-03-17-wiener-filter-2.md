@@ -33,7 +33,7 @@ $\hat{s}(n) = \textbf{w}^{\ast T}\textbf{x}(n)$.
 |-----------------------------------------------||:------------------------------------:|
 | 1. $s(n)$ and $v(n)$ are uncorrelated. 		|| $\mathbb{E}[s(n)v(n)] = 0$ 			|
 | 2. $v(n)$ is a white Gaussian noise. 			|| $v(n) \sim \mathcal{N}(0,\sigma_v^2)$|
-| 5. The noise variance $\sigma_v^2$. 			|| _Known_ 								|
+| 3. The noise variance $\sigma_v^2$. 			|| _Known_ 								|
 
 
 ## 3) Solution
