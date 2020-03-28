@@ -8,7 +8,7 @@ tags: [Fourier, Spectral Analysis, DFT]
 ---
 
 
-## 1) Introduction
+## 1) Definition
 
 The discrete Fourier transform is often used for spectral analysis of sequences $x(n)$ of finite length e.g. discrete time series under the assumption that $x(n)$ is $N$-periodic ($N$-periodic refers to that $x(n)$ repeats itself for every $N$ sample). The discrete Fourier transform is defined as
 
