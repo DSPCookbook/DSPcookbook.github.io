@@ -287,3 +287,6 @@ defaults:
       share: true
       related: true
       mathjax: true
+      header:
+        overlay_image: /images/frequency.png
+        

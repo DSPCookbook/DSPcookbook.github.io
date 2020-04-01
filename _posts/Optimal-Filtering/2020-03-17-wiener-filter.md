@@ -5,7 +5,7 @@ modified: 2020-3-22
 excerpt: Wiener filter
 categories: [Optimal-Filtering]
 tags: [Statistical Signal Processing, Optimal Filtering]
-
+author: Poul
 ---
 
 [//]: # "Comment"
@@ -29,7 +29,7 @@ $\hat{s}(n) = \textbf{w}^{\ast T}\textbf{x}(n)$.
 ## 2) Assumptions
 
 
-| Assumption   					 				|| Mathematical description   			| 
+| Assumption   					 				|| Mathematical description   			|
 |-----------------------------------------------||:------------------------------------:|
 | 1. $s(n)$ and $v(n)$ are uncorrelated. 		|| $\mathbb{E}[s(n)v(n)] = 0$ 			|
 | 2. $v(n)$ is a white Gaussian noise. 			|| $v(n) \sim \mathcal{N}(0,\sigma_v^2)$|
@@ -154,8 +154,3 @@ For the derivation of the time domain Wiener filter, check out the [extra materi
 ## C code implementation of the Wiener filter
 
 A C-code implementation of the simulation can be found [here]({{ site.baseurl }}{% link _posts/Optimal-Filtering/2020-03-20-wiener-filter-c-code-extra.md %})
-
-
-
-
-

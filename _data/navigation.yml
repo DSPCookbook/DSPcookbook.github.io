@@ -2,8 +2,8 @@
 main:
   - title: "All recipes"
     url: /
-  - title: "Fourier"
-    url: /fourier
+  - title: "Spectral Analysis"
+    url: /spectral-analysis
   - title: "Beamforming"
     url: /beamforming
   - title: "Optimal Filtering"

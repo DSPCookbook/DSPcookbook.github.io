@@ -1,11 +1,11 @@
 ---
 layout: recipe
-title: Time domain Wiener filter - Unknown signal in white Gaussian noise 
+title: Time domain Wiener filter - Unknown signal in white Gaussian noise
 modified: 2020-3-22
 excerpt: Wiener filter
 categories: [Optimal-Filtering]
 tags: [Statistical Signal Processing, Optimal Filtering]
-
+author: Poul
 ---
 
 [//]: # "Comment"
@@ -29,7 +29,7 @@ $\hat{s}(n) = \textbf{w}^{\ast T}\textbf{x}(n)$.
 ## 2) Assumptions
 
 
-| Assumption   					 				|| Mathematical description   			| 
+| Assumption   					 				|| Mathematical description   			|
 |-----------------------------------------------||:------------------------------------:|
 | 1. $s(n)$ and $v(n)$ are uncorrelated. 		|| $\mathbb{E}[s(n)v(n)] = 0$ 			|
 | 2. $v(n)$ is a white Gaussian noise. 			|| $v(n) \sim \mathcal{N}(0,\sigma_v^2)$|
@@ -64,7 +64,7 @@ where $$\hat{\textbf{R}}_{xx} \in \mathbb{R}^{M\times M}$$ is the sample estimat
 
 	where $$\textbf{x}(n) = [\textbf{x}(0),...,\textbf{x}(N-k-1)]^T$$ and $$\textbf{x}(n+k) = [\textbf{x}(k),...,\textbf{x}(N-1)]^T$$.
 
-4. Estimate the autocorrelation of $s(n)$ as 
+4. Estimate the autocorrelation of $s(n)$ as
 
 	$$\hat{r}_{ss}(k) = \hat{r}_{xx}(k) - r_{vv}(k)$$
 
@@ -153,8 +153,3 @@ title('Wiener filtering')
 ## Derivation of the Wiener filter
 
 For the derivation of the time domain Wiener filter, check out the [extra material]({{ site.baseurl }}{% link _posts/Optimal-Filtering/2020-03-20-wiener-filter-derivation-extra.md %}).
-
-
-
-
-

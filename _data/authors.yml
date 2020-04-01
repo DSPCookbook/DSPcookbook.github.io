@@ -1,0 +1,23 @@
+Rasmus:
+  name        : "Rasmus Gundorff Sæderup"
+  bio         : "Signal processing research engineer at Viewcare A/S."
+  avatar      : "/images/rgs.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:rasmus.gs@gmail.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://rasmusgs.com/cv"
+
+Poul:
+  name        : "Poul Hoang"
+  bio         : "Industrial Ph.D. fellow in noise reduction for hearing assistive devices in collaboration with Demant A/S and Aalborg University."
+  avatar      : "/images/ph.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:poh@es.aau.dk"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://vbn.aau.dk/da/persons/134313"

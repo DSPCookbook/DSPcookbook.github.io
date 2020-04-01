@@ -3,9 +3,10 @@ layout: recipe
 title: The Fourier Transform!
 modified: 2020-2-29
 excerpt: Something with sinusoids.
-categories: [Spectral Analysis]
+categories: [Spectral-Analysis]
 published: false
 tags: [Fourier, frequency]
+author: Rasmus
 ---
 
 

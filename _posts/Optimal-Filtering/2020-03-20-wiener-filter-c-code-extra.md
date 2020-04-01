@@ -6,6 +6,7 @@ excerpt: Something with sinusoids.
 categories: [Optimal-Filtering]
 tags: [Statistical Signal Processing, Optimal Filtering]
 classes: wide2
+author: Poul
 ---
 
 ## C code implementation of the Wiener filter

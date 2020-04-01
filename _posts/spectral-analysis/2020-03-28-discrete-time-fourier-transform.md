@@ -3,8 +3,9 @@ layout: recipe
 title: Discrete-time Fourier transform (DTFT)
 modified: 2020-03-28
 excerpt: Something with sinusoids.
-categories: [Spectral Analysis]
+categories: [Spectral-Analysis]
 tags: [Fourier, Spectral Analysis, DTFT]
+author: Poul
 ---
 
 
@@ -25,8 +26,8 @@ where $\omega$ is the angular velocity, $n$ is the time index, and $\sqrt{-1} = 
 
   where $w(n)$ is a rectangular window defined as
 
-  $$w(n) = \begin{cases} 
-  1, \quad -N \leq n \leq N \\ 
+  $$w(n) = \begin{cases}
+  1, \quad -N \leq n \leq N \\
   0, \quad \text{otherwise}
   \end{cases}$$
 
@@ -39,10 +40,10 @@ where $\omega$ is the angular velocity, $n$ is the time index, and $\sqrt{-1} = 
   $$\text{DTFT}\lbrace \cos(\omega_0 n) \rbrace = \pi \sum_{k=-\infty}^{\infty} \left( \delta(\omega - \omega_0 - 2\pi k) - \delta(\omega + \omega_0 + 2\pi k)\right)  $$
 
 3) Derive the expression of $X(\omega)$
-	
+
   $$X(\omega) = W(\omega) \ast \left( \pi \sum_{k=-\infty}^{\infty} \left( \delta(\omega - \omega_0 - 2\pi k) - \delta(\omega + \omega_0 + 2\pi k)\right) \right)$$
 
-  where $\ast$ is the convolution operator. As $\ast$ is a linear operator we may further reduce the expression to 
+  where $\ast$ is the convolution operator. As $\ast$ is a linear operator we may further reduce the expression to
 
   $$\begin{split}
   X(\omega) &= \pi  \sum_{k=-\infty}^{\infty} W(\omega) \ast  \left( \delta(\omega - \omega_0 - 2\pi k) - \delta(\omega + \omega_0 + 2\pi k)\right)  \\
@@ -53,7 +54,7 @@ where $\omega$ is the angular velocity, $n$ is the time index, and $\sqrt{-1} = 
   Hence the DTFT of a windowed cosine, is a frequency shifted sinc-function by $\omega_0$ that repeats itself with a periodicity of $2\pi$.
 
 
-## 3) Step-by-step practical example: Windowed cosine function 
+## 3) Step-by-step practical example: Windowed cosine function
 
 1) We define the windowed cosine function as
 
@@ -61,15 +62,15 @@ where $\omega$ is the angular velocity, $n$ is the time index, and $\sqrt{-1} = 
 
   where $\omega_0$ is e.g. $\frac{\pi}{4}$ $w(n)$ is a rectangular window defined as
 
-  $$w(n) = \begin{cases} 
-  1, \quad -N \leq n \leq N \\ 
+  $$w(n) = \begin{cases}
+  1, \quad -N \leq n \leq N \\
   0, \quad \text{otherwise}
   \end{cases}$$
 
   Therefore, $x(n)$ may be expressed as
 
-  $$x(n) = \begin{cases} 
-  \cos(\omega_0 n), \quad &-N \leq n \leq N \\ 
+  $$x(n) = \begin{cases}
+  \cos(\omega_0 n), \quad &-N \leq n \leq N \\
   0, \quad &\text{otherwise}
   \end{cases}$$
 

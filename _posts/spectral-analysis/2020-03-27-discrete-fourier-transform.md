@@ -3,8 +3,9 @@ layout: recipe
 title: Discrete Fourier transform (DFT)
 modified: 2020-03-27
 excerpt: Something with sinusoids.
-categories: [Spectral Analysis]
+categories: [Spectral-Analysis]
 tags: [Fourier, Spectral Analysis, DFT]
+author: Poul
 ---
 
 
@@ -19,7 +20,7 @@ where $k$ is the frequency bin index, $n$ is the time index, $N$ is the length o
 ## 2) Assumptions
 
 
-| Assumption   					 				|| Mathematical description   			| 
+| Assumption   					 				|| Mathematical description   			|
 |-----------------------------------------------||:------------------------------------:|
 | 1. $x(n)$ is $N$-periodic.    				|| $x(n+mN) = x(n)$, $m \in \mathbb{Z}$ |
 | 2. $X(k)$ is $N$-periodic. 					|| $X(k+mN) = X(k)$, $m \in \mathbb{Z}$	|
@@ -98,7 +99,7 @@ void main(void)
   double   fs 	  = 1000;
 
   // Allocate array for signal
-  double   x[N]; 
+  double   x[N];
   double   complex X[N];
   double   Px[N];
 

@@ -6,6 +6,7 @@ excerpt: Something with sinusoids.
 categories: [Optimal-Filtering]
 tags: [Statistical Signal Processing, Optimal Filtering]
 classes: wide2
+author: Poul
 ---
 
 ## Derivation of the time domain Wiener Filter
@@ -87,4 +88,3 @@ $\vdots$
 $\frac{\partial}{\partial w_{M-1}} \text{MSE} = 0 \Rightarrow w_0 r_{x_0 x_{M-1}} + ... + w_{M-1} r_{x_{M-1} x_{M-1}} = r_{sx_{M-1}}$.
 
 On this form linear algebra comes in very handy as we may put the equations into matrix-vector form making it easy to solve.
-
